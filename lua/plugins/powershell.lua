@@ -1,9 +1,11 @@
 return {
   "TheLeoP/powershell.nvim",
-  enabled = true,
+  enabled = false,
   ---@type powershell.user_config
   opts = {
-    bundle_path = "C:\\Users\\ben-work\\AppData\\Local\\nvim-data\\mason\\packages\\powershell-editor-services",
+    bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services",
     settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
   },
+  ft = "ps1",
+  lazy = false,
 }

@@ -1,29 +1,22 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*",
   lazy = true,
   ft = "markdown",
   cmd = {
     "Obsidian",
-    "ObsidianQuickSwitch",
   },
   keys = {
-    { "<leader>no", "<cmd>ObsidianQuickSwitch<cr>", desc = "Obsidian Quick Switch" },
-    { "<leader>nn", "<cmd>ObsidianNew<cr>", desc = "New note" },
-    { "<leader>nd", "<cmd>ObsidianToday<cr>", desc = "Today's note" },
-    { "<leader>nj", "<cmd>ObsidianDailies<cr>", desc = "Search daily notes" },
-    { "<leader>nt", "<cmd>ObsidianTemplate<cr>", desc = "Insert template" },
+    { "<leader>on", "<cmd>Obsidian quick_switch<cr>", desc = "Obsidian Quick Switch" },
+    { "<leader>op", "<cmd>edit ~/Projects/dta-notes/notes/_local/Planner.md<cr>", desc = "Open planner note" },
   },
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
+    "echasnovski/mini.files",
   },
   opts = {
     workspaces = {
-      {
-        name = "Spiderverse",
-        path = "~/Documents/Spiderverse",
-      },
       {
         name = "Work",
         path = "~/Projects/dta-notes",
@@ -31,16 +24,6 @@ return {
           notes_subdir = "notes",
         },
       },
-    },
-    daily_notes = {
-      folder = "daily",
-    },
-    ui = {
-      enable = true,
-    },
-    templates = {
-      folder = "Templates",
-      date_format = "%Y-%m-%d",
     },
     follow_url_func = function(url)
       local pattern = "^https://github%.com/[%w%-%.]+/[%w%-%.]+/issues/%d+$"

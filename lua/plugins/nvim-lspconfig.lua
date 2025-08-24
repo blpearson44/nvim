@@ -1,6 +1,7 @@
 return {
   "neovim/nvim-lspconfig",
   event = "LazyFile",
+  enabled = true,
   dependencies = {
     { "mason.nvim", version = "1.x" },
     { "williamboman/mason-lspconfig.nvim", version = "1.x", config = function() end },
@@ -64,8 +65,8 @@ return {
       ---@type lspconfig.options
       servers = {
         powershell_es = {
-          bundle_path = "C:\\Users\\ben-work\\AppData\\Local\\nvim-data\\mason\\packages\\powershell-editor-services",
-          settings = { powershell = { codeFormatting = { Preset = "OTBS" } } },
+          bundle_path = vim.fn.stdpath("data") .. "/mason/packages/powershell-editor-services",
+          settings = { powershell = { codeFormatting = { Preset = "OTBS", tabSize = 4, indentSize = 4 } } },
         },
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason

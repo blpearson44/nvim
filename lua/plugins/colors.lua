@@ -1,13 +1,24 @@
 return {
   -- Coloscheme
   {
-    "olimorris/onedarkpro.nvim", enabled = false, lazy = false,
+    "olimorris/onedarkpro.nvim",
+    enabled = false,
+    lazy = false,
   },
   {
-    "catppuccin/nvim", name = "catppuccin", priority = 1000,
-    config = function ()
+    "catppuccin/nvim",
+    name = "catppuccin",
+    priority = 1000,
+    config = function()
       require("catppuccin").setup({
-        color_overrides = {
+        color_overrides = {},
+        transparent_background = true,
+        background = {
+          dark = "mocha",
+        },
+        styles = {
+          comments = { "italic" },
+          conditionals = { "italic" },
         },
         integrations = {
           cmp = true,
@@ -38,20 +49,21 @@ return {
               ok = { "italic" },
             },
             underlines = {
-              {nil}
+              { nil },
             },
             inlay_hints = {
               background = true,
             },
-          },}
+          },
+        },
       })
       vim.cmd.colorscheme("catppuccin-mocha")
-    end
+    end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin-mocha"
-    }
-  }
+      colorscheme = "catppuccin-mocha",
+    },
+  },
 }

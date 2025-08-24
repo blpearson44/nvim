@@ -20,3 +20,4 @@ vim.opt.scrolloff = 11
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.g.nofsync = true
+vim.opt.clipboard = "unnamedplus"
