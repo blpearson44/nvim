@@ -9,6 +9,12 @@ return {
   keys = {
     { "<leader>on", "<cmd>Obsidian quick_switch<cr>", desc = "Obsidian Quick Switch" },
     { "<leader>op", "<cmd>edit ~/Projects/dta-notes/notes/_local/Planner.md<cr>", desc = "Open planner note" },
+    { "<leader>ot", "<cmd>Obsidian today<cr>", desc = "Open today's note" },
+    { "<leader>of", "<cmd>Obsidian follow_link<cr>", desc = "Follow link under cursor" },
+    { "<leader>os", "<cmd>Obsidian search_notes<cr>", desc = "Search notes" },
+    { "<leader>ol", "<cmd>Obsidian link<cr>", desc = "Link to note" },
+    { "<leader>om", "<cmd>Obsidian backlinks<cr>", desc = "Show backlinks" },
+    { "<C-c><C-c>", "<cmd>Obsidian toggle_checkbox<cr>", desc = "Toggle checkbox", mode = { "n", "i", "v" } },
   },
   dependencies = {
     -- Required.
@@ -22,6 +28,12 @@ return {
         path = "~/Projects/dta-notes",
         overrides = {
           notes_subdir = "notes",
+          daily_notes = {
+            folder = "notes/_local/dailies",
+            default_tags = {
+              "daily",
+            },
+          },
         },
       },
     },

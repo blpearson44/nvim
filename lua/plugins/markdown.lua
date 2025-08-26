@@ -29,7 +29,7 @@ return {
     {
       "OXY2DEV/markview.nvim",
       lazy = false,
-      enabled = true,
+      enabled = false,
 
       -- For `nvim-treesitter` users.
       priority = 49,

@@ -16,6 +16,10 @@ return {
         mode = { "n", "v" },
         { desc = "CopilotChat - Buffer chat" },
       },
+      {
+        "<C-l>",
+        nil,
+      },
     },
   },
 }
