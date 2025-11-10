@@ -19,7 +19,7 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-    "echasnovski/mini.files",
+    "nvim-mini/mini.files",
   },
   opts = {
     workspaces = {

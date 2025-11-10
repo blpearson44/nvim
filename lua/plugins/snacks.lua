@@ -23,6 +23,7 @@ print(longform_date())
 return {
   "folke/snacks.nvim",
   opts = {
+    gh = {},
     indent = { enabled = true },
     input = { enabled = true },
     notifier = { enabled = true },
@@ -33,6 +34,36 @@ return {
     words = { enabled = true },
     terminal = { enabled = true },
     explorer = { enabled = false },
+    keys = {
+      {
+        "<leader>gi",
+        function()
+          Snacks.picker.gh_issue()
+        end,
+        desc = "GitHub Issues (open)",
+      },
+      {
+        "<leader>gI",
+        function()
+          Snacks.picker.gh_issue({ state = "all" })
+        end,
+        desc = "GitHub Issues (all)",
+      },
+      {
+        "<leader>gp",
+        function()
+          Snacks.picker.gh_pr()
+        end,
+        desc = "GitHub Pull Requests (open)",
+      },
+      {
+        "<leader>gP",
+        function()
+          Snacks.picker.gh_pr({ state = "all" })
+        end,
+        desc = "GitHub Pull Requests (all)",
+      },
+    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)

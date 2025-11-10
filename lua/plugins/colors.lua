@@ -6,6 +6,12 @@ return {
     lazy = false,
   },
   {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "catppuccin-mocha",
+    },
+  },
+  {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
@@ -22,6 +28,7 @@ return {
         },
         integrations = {
           cmp = true,
+          neotree = true,
           telescope = {
             enabled = true,
           },
