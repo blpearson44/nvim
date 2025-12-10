@@ -8,9 +8,7 @@ return {
         function()
           local input = vim.fn.input("Buffer Quick Chat: ")
           if input ~= "" then
-            require("CopilotChat").ask(input, {
-              selection = require("CopilotChat.select").buffer,
-            })
+            require("CopilotChat").ask("#buffer:active " .. input)
           end
         end,
         mode = { "n", "v" },

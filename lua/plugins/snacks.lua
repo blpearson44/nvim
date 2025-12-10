@@ -24,7 +24,15 @@ return {
   "folke/snacks.nvim",
   opts = {
     gh = {},
-    indent = { enabled = true },
+    indent = {
+      enabled = true,
+      animate = {
+        enabled = false,
+        style = "out",
+        total = 100,
+        step = 4,
+      },
+    },
     input = { enabled = true },
     notifier = { enabled = true },
     scope = { enabled = true },
@@ -33,7 +41,11 @@ return {
     toggle = { map = LazyVim.safe_keymap_set },
     words = { enabled = true },
     terminal = { enabled = true },
-    explorer = { enabled = false },
+    explorer = {
+      enabled = false,
+      git_status = true,
+      diagnostics = true,
+    },
     keys = {
       {
         "<leader>gi",

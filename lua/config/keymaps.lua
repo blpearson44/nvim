@@ -18,12 +18,3 @@ map("n", "<C-j>", require("smart-splits").move_cursor_down)
 map("n", "<C-k>", require("smart-splits").move_cursor_up)
 map("n", "<C-l>", require("smart-splits").move_cursor_right)
 map("n", "<leader>db", require("snacks.dashboard").open, { desc = "Open dashboard" })
--- Quick chat keybinding
-vim.keymap.set("n", "<leader>ab", function()
-  local input = vim.fn.input("Quick Chat: ")
-  if input ~= "" then
-    require("CopilotChat").ask(input, {
-      selection = require("CopilotChat.select").buffer,
-    })
-  end
-end, { desc = "CopilotChat - Quick chat" })

@@ -1,7 +1,9 @@
 return {
   "mrjones2014/smart-splits.nvim",
   lazy = false,
-  config = function()
-    require("smart-splits").setup({})
-  end,
+  opts = {
+    ignored_filetypes = {
+      "snacks_picker_list",
+    },
+  },
 }
