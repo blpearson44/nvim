@@ -45,6 +45,7 @@ return {
         noice = true,
         octo = true,
         markdown = true,
+        neogit = true,
         dashboard = true,
         gitgutter = true,
         leap = true,

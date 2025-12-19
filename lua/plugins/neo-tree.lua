@@ -15,8 +15,10 @@ return {
     enable_diagnostics = true,
     add_blank_line_at_top = true,
     close_if_last_window = true,
-    enable_cursor_hijack = true,
+    enable_cursor_hijack = false,
+    open_on_single_click = true,
     filesystem = {
+      bind_to_cwd = true,
       window = {
         preview = true,
       },
